@@ -1,0 +1,13 @@
+"D:\Program Files (x86)\IAR Systems\Embedded Workbench 8.4\arm\bin\armproc.dll" 
+
+"D:\Program Files (x86)\IAR Systems\Embedded Workbench 8.4\arm\bin\armsim2.dll" 
+
+"E:\ArduinoMpu9250\STM32\IAR-test\Debug\Exe\stm-demo.out" 
+
+--plugin="D:\Program Files (x86)\IAR Systems\Embedded Workbench 8.4\arm\bin\armbat.dll" 
+
+--device_macro="D:\Program Files (x86)\IAR Systems\Embedded Workbench 8.4\arm\config\debugger\ST\STM32F1xx.dmac" 
+
+
+
+

@@ -222,6 +222,13 @@ void MahonyQuaternionUpdate(float ax, float ay, float az, float gx, float gy, fl
   q3 = pb + (q1 * gy - pa * gz + pc * gx) * (0.5f * deltat);
   q4 = pc + (q1 * gz + pa * gy - pb * gx) * (0.5f * deltat);
 
+  //此处算法存疑，可以多试试
+  // q1 = q1 + (-q2 * gx - q3 * gy - q4 * gz) * (0.5f * deltat);
+  // q2 = q2 + (q1 * gx + q3 * gz - q4 * gy) * (0.5f * deltat);
+  // q3 = pb + (q1 * gy - q2 * gz + q4 * gx) * (0.5f * deltat);
+  // q4 = pc + (q1 * gz + q2 * gy - q3 * gx) * (0.5f * deltat);
+
+
   // Normalise quaternion
   norm = sqrt(q1 * q1 + q2 * q2 + q3 * q3 + q4 * q4);
   norm = 1.0f / norm;
@@ -229,6 +236,18 @@ void MahonyQuaternionUpdate(float ax, float ay, float az, float gx, float gy, fl
   q[1] = q2 * norm;
   q[2] = q3 * norm;
   q[3] = q4 * norm;
+
+  //x,y,z的算法和其它地方也不一样，多试试看
+  // float x,y,z,r2d;
+  // r2d = 180/3.1415926;
+  // x = -asinf(-2*q2*q4 + 2*q1*q3) * r2d;
+  // y = atan2f(2*q3*q4 + 2*q1*q2, -2*q2*q2 - 2*q3*q3 + 1) * r2d;
+  // z = atan2f(2*q2*q3 + 2*q1*q4, -2*q3*q3 - 2*q4*q4 + 1) * r2d; 
+
+  // Serial.print("x,y,z:");
+  // Serial.print(x);Serial.print("  ");
+  // Serial.print(y);Serial.print("  ");
+  // Serial.println(z);
 }
 
 const float * getQ () { return q; }

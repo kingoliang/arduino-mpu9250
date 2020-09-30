@@ -1,0 +1,15 @@
+main.pbi: E:\ArduinoMpu9250\STM32\IAR-test\FWLIB\inc\stm32f10x_gpio.h \
+  E:\ArduinoMpu9250\STM32\IAR-test\CMSIS\system_stm32f10x.h \
+  D:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.4\arm\inc\c\iccarm_builtin.h \
+  D:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.4\arm\CMSIS\Core\Include\cmsis_iccarm.h \
+  D:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.4\arm\CMSIS\Core\Include\cmsis_compiler.h \
+  D:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.4\arm\CMSIS\Core\Include\cmsis_version.h \
+  D:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.4\arm\inc\c\DLib_Product.h \
+  D:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.4\arm\inc\c\DLib_Config_Normal.h \
+  D:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.4\arm\inc\c\DLib_Defaults.h \
+  D:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.4\arm\inc\c\yvals.h \
+  D:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.4\arm\inc\c\ycheck.h \
+  D:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.4\arm\inc\c\stdint.h \
+  D:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.4\arm\CMSIS\Core\Include\core_cm3.h \
+  E:\ArduinoMpu9250\STM32\IAR-test\CMSIS\stm32f10x.h \
+  E:\ArduinoMpu9250\STM32\IAR-test\USER\main.c

@@ -1,0 +1,39 @@
+stm32f10x_rcc.pbi: \
+  E:\ArduinoMpu9250\STM32\IAR-test\FWLIB\src\stm32f10x_rcc.c \
+  E:\ArduinoMpu9250\STM32\IAR-test\FWLIB\inc\stm32f10x_rcc.h \
+  E:\ArduinoMpu9250\STM32\IAR-test\CMSIS\stm32f10x.h \
+  D:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.4\arm\CMSIS\Core\Include\core_cm3.h \
+  D:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.4\arm\inc\c\stdint.h \
+  D:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.4\arm\inc\c\ycheck.h \
+  D:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.4\arm\inc\c\yvals.h \
+  D:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.4\arm\inc\c\DLib_Defaults.h \
+  D:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.4\arm\inc\c\DLib_Config_Normal.h \
+  D:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.4\arm\inc\c\DLib_Product.h \
+  D:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.4\arm\CMSIS\Core\Include/cmsis_version.h \
+  D:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.4\arm\CMSIS\Core\Include/cmsis_compiler.h \
+  D:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.4\arm\CMSIS\Core\Include\cmsis_iccarm.h \
+  D:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.4\arm\inc\c\iccarm_builtin.h \
+  E:\ArduinoMpu9250\STM32\IAR-test\CMSIS/system_stm32f10x.h \
+  E:\ArduinoMpu9250\STM32\IAR-test\USER\stm32f10x_conf.h \
+  E:\ArduinoMpu9250\STM32\IAR-test\FWLIB\inc\stm32f10x_adc.h \
+  E:\ArduinoMpu9250\STM32\IAR-test\FWLIB\inc\stm32f10x_bkp.h \
+  E:\ArduinoMpu9250\STM32\IAR-test\FWLIB\inc\stm32f10x_can.h \
+  E:\ArduinoMpu9250\STM32\IAR-test\FWLIB\inc\stm32f10x_cec.h \
+  E:\ArduinoMpu9250\STM32\IAR-test\FWLIB\inc\stm32f10x_crc.h \
+  E:\ArduinoMpu9250\STM32\IAR-test\FWLIB\inc\stm32f10x_dac.h \
+  E:\ArduinoMpu9250\STM32\IAR-test\FWLIB\inc\stm32f10x_dbgmcu.h \
+  E:\ArduinoMpu9250\STM32\IAR-test\FWLIB\inc\stm32f10x_dma.h \
+  E:\ArduinoMpu9250\STM32\IAR-test\FWLIB\inc\stm32f10x_exti.h \
+  E:\ArduinoMpu9250\STM32\IAR-test\FWLIB\inc\stm32f10x_flash.h \
+  E:\ArduinoMpu9250\STM32\IAR-test\FWLIB\inc\stm32f10x_fsmc.h \
+  E:\ArduinoMpu9250\STM32\IAR-test\FWLIB\inc\stm32f10x_gpio.h \
+  E:\ArduinoMpu9250\STM32\IAR-test\FWLIB\inc\stm32f10x_i2c.h \
+  E:\ArduinoMpu9250\STM32\IAR-test\FWLIB\inc\stm32f10x_iwdg.h \
+  E:\ArduinoMpu9250\STM32\IAR-test\FWLIB\inc\stm32f10x_pwr.h \
+  E:\ArduinoMpu9250\STM32\IAR-test\FWLIB\inc\stm32f10x_rtc.h \
+  E:\ArduinoMpu9250\STM32\IAR-test\FWLIB\inc\stm32f10x_sdio.h \
+  E:\ArduinoMpu9250\STM32\IAR-test\FWLIB\inc\stm32f10x_spi.h \
+  E:\ArduinoMpu9250\STM32\IAR-test\FWLIB\inc\stm32f10x_tim.h \
+  E:\ArduinoMpu9250\STM32\IAR-test\FWLIB\inc\stm32f10x_usart.h \
+  E:\ArduinoMpu9250\STM32\IAR-test\FWLIB\inc\stm32f10x_wwdg.h \
+  E:\ArduinoMpu9250\STM32\IAR-test\FWLIB\inc\misc.h

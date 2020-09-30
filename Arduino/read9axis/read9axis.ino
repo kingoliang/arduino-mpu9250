@@ -37,17 +37,17 @@ void loop() {
   float mx,my,mz;
 //  float temp;
 
-  fabo_9axis.readAccelXYZ(&ax,&ay,&az);
+//  fabo_9axis.readAccelXYZ(&ax,&ay,&az);
 //  fabo_9axis.readGyroXYZ(&gx,&gy,&gz);
   fabo_9axis.readMagnetXYZ(&mx,&my,&mz);
 //  fabo_9axis.readTemperature(&temp);
 
-  Serial.print("ax: ");
-  Serial.print(ax);
-  Serial.print(" ay: ");
-  Serial.print(ay);
-  Serial.print(" az: ");
-  Serial.println(az);
+//  Serial.print("ax: ");
+//  Serial.print(ax);
+//  Serial.print(" ay: ");
+//  Serial.print(ay);
+//  Serial.print(" az: ");
+//  Serial.println(az);
 //
 //  Serial.print("gx: ");
 //  Serial.print(gx);
@@ -56,12 +56,12 @@ void loop() {
 //  Serial.print(" gz: ");
 //  Serial.println(gz);
 
-//  Serial.print("mx: ");
-//  Serial.print(mx);
-//  Serial.print(" my: ");
-//  Serial.print(my);
-//  Serial.print(" mz: ");
-//  Serial.println(mz);
+  Serial.print("mx: ");
+  Serial.print(mx);
+  Serial.print(" my: ");
+  Serial.print(my);
+  Serial.print(" mz: ");
+  Serial.println(mz);
 
 //  Serial.print("temp: ");
 //  Serial.println(temp);

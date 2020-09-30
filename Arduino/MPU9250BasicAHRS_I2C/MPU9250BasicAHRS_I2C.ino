@@ -36,8 +36,9 @@ int myLed  = 13;  // Set up pin 13 led for toggling
 
 #define I2Cclock 400000
 #define I2Cport Wire
-#define MPU9250_ADDRESS MPU9250_ADDRESS_AD0   // Use either this line or the next to select which I2C address your device is using
+//#define MPU9250_ADDRESS MPU9250_ADDRESS_AD0   // Use either this line or the next to select which I2C address your device is using
 //#define MPU9250_ADDRESS MPU9250_ADDRESS_AD1
+#define MPU9250_ADDRESS 0x68
 
 MPU9250 myIMU(MPU9250_ADDRESS, I2Cport, I2Cclock);
 
@@ -129,7 +130,15 @@ void setup()
 
     // The next call delays for 4 seconds, and then records about 15 seconds of
     // data to calculate bias and scale.
-    myIMU.magCalMPU9250(myIMU.magBias, myIMU.magScale);
+    //myIMU.magCalMPU9250(myIMU.magBias, myIMU.magScale);
+    
+    myIMU.magBias[0] = 40.28;
+    myIMU.magBias[1] = 89.31;
+    myIMU.magBias[2] = -262.36;
+    myIMU.magScale[0] = 1.08;
+    myIMU.magScale[1] = 0.96;
+    myIMU.magScale[2] = 0.97;
+
     Serial.println("AK8963 mag biases (mG)");
     Serial.println(myIMU.magBias[0]);
     Serial.println(myIMU.magBias[1]);
@@ -198,9 +207,9 @@ void loop()
                * myIMU.factoryMagCalibration[1] - myIMU.magBias[1];
     myIMU.mz = (float)myIMU.magCount[2] * myIMU.mRes
                * myIMU.factoryMagCalibration[2] - myIMU.magBias[2];
-    myIMU.mx *= myIMU.magScale[0];
-    myIMU.my *= myIMU.magScale[1];
-    myIMU.mz *= myIMU.magScale[2];
+//    myIMU.mx *= myIMU.magScale[0];
+//    myIMU.my *= myIMU.magScale[1];
+//    myIMU.mz *= myIMU.magScale[2];
   } // if (readByte(MPU9250_ADDRESS, INT_STATUS) & 0x01)
 
   // Must be called before updating quaternions!
@@ -214,9 +223,10 @@ void loop()
   // along the x-axis just like in the LSM9DS0 sensor. This rotation can be
   // modified to allow any convenient orientation convention. This is ok by
   // aircraft orientation standards! Pass gyro rate as rad/s
-  MahonyQuaternionUpdate(myIMU.ax, myIMU.ay, myIMU.az, myIMU.gx * DEG_TO_RAD,
-                         myIMU.gy * DEG_TO_RAD, myIMU.gz * DEG_TO_RAD, myIMU.my,
-                         myIMU.mx, myIMU.mz, myIMU.deltat);
+  //此处mx,my,mz值的顺序和正负存疑
+  MadgwickQuaternionUpdate(myIMU.ax, myIMU.ay, myIMU.az, myIMU.gx * DEG_TO_RAD,
+                         myIMU.gy * DEG_TO_RAD, myIMU.gz * DEG_TO_RAD, myIMU.mx,
+                         myIMU.my, myIMU.mz, myIMU.deltat);
 
   // Serial print and/or display at 0.5 s rate independent of data rates
   myIMU.delt_t = millis() - myIMU.count;
@@ -282,6 +292,25 @@ void loop()
     myIMU.yaw  -= 8.5;
     myIMU.roll *= RAD_TO_DEG;
 
+
+    if(!SerialDebug) //打印ax,ay,az
+    {
+      Serial.print(myIMU.ax, 2);
+      Serial.print(", ");
+      Serial.print(myIMU.ay, 2);
+      Serial.print(", ");
+      Serial.println(myIMU.az, 2);
+    }
+
+    if(!SerialDebug) //打印gx,gy,gz
+    {
+      Serial.print(myIMU.ax, 2);
+      Serial.print(", ");
+      Serial.print(myIMU.ay, 2);
+      Serial.print(", ");
+      Serial.println(myIMU.az, 2);
+    }
+
     if(!SerialDebug)
     {
       Serial.print("Yaw, Pitch, Roll: ");
@@ -291,15 +320,15 @@ void loop()
       Serial.print(", ");
       Serial.println(myIMU.roll, 2);
 
-      Serial.print("rate = ");
-      Serial.print((float)myIMU.sumCount / myIMU.sum, 2);
-      Serial.println(" Hz");
+//      Serial.print("rate = ");
+//      Serial.print((float)myIMU.sumCount / myIMU.sum, 2);
+//      Serial.println(" Hz");
     }
 
 
-    Serial.print("mx my mz:");
-    Serial.print((int)myIMU.mx );Serial.print("  ");
-    Serial.print((int)myIMU.my );Serial.print("  ");
+//    Serial.print("mx my mz:");
+    Serial.print((int)myIMU.mx );Serial.print(",");
+    Serial.print((int)myIMU.my );Serial.print(",");
     Serial.println((int)myIMU.mz );
     myIMU.count = millis();
     myIMU.sumCount = 0;
